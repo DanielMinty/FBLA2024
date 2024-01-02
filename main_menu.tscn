@@ -36,5 +36,15 @@ text = "Tutorial"
 layout_mode = 2
 text = "Quit"
 
+[node name="Window" type="Window" parent="."]
+title = "Tutorial"
+initial_position = 1
+size = Vector2i(500, 500)
+visible = false
+
+[node name="Camera2D" type="Camera2D" parent="Window"]
+
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]

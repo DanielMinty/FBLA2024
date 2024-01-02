@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cflc8skgd4777"]
+
+[ext_resource type="PackedScene" uid="uid://dl7gv5ptwsxwl" path="res://pause_menu.tscn" id="1_ab8dm"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_u5lg6"]
+
+[node name="Gameeeee" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(358, 125)
+scale = Vector2(95.5, 58.5)
+texture = SubResource("CanvasTexture_u5lg6")
+
+[node name="Pause Menu" parent="." instance=ExtResource("1_ab8dm")]
+offset_left = 537.0
+offset_top = 246.0
+offset_right = 537.0
+offset_bottom = 246.0
