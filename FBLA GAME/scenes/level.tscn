@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvqghfq06n6pl"]
+
+[ext_resource type="PackedScene" uid="uid://i2xgqm83u615" path="res://player/player.tscn" id="1_4q8ke"]
+[ext_resource type="PackedScene" uid="uid://bvc58u6ti6cro" path="res://actions/action_layout.tscn" id="1_4wkx7"]
+[ext_resource type="PackedScene" uid="uid://bbcodlaxvj7m3" path="res://ui/ui.tscn" id="2_jio2y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjq4d"]
+size = Vector2(2, 658)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sopr5"]
+size = Vector2(2, 648)
+
+[node name="Level" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+
+[node name="Lights" type="Node2D" parent="."]
+
+[node name="Interactables" type="Node2D" parent="."]
+
+[node name="Actions" parent="Interactables" instance=ExtResource("1_4wkx7")]
+offset_left = 234.0
+offset_top = 567.0
+offset_right = 274.0
+offset_bottom = 607.0
+
+[node name="Non Interactables" type="Node2D" parent="."]
+
+[node name="Scenes" type="Node2D" parent="."]
+
+[node name="Bounds" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(1, 319)
+shape = SubResource("RectangleShape2D_xjq4d")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(1151, 324)
+shape = SubResource("RectangleShape2D_sopr5")
+
+[node name="Player" parent="." instance=ExtResource("1_4q8ke")]
+position = Vector2(576, 586)
+
+[node name="UI" parent="." instance=ExtResource("2_jio2y")]
