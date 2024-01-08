@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd1okwlusyhuv"]
+
+[ext_resource type="Script" path="res://mainmanu.gd" id="1_yl5xk"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 271.0
+offset_top = 104.0
+offset_right = 271.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yl5xk")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 234.0
+offset_top = 171.0
+offset_right = 412.0
+offset_bottom = 202.0
+text = "Play"
+
+[node name="Tutorial" type="Button" parent="."]
+offset_left = 234.0
+offset_top = 204.0
+offset_right = 412.0
+offset_bottom = 235.0
+text = "Tutorial"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 234.0
+offset_top = 237.0
+offset_right = 412.0
+offset_bottom = 268.0
+text = "Quit"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

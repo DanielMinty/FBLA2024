@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2l5fhmsnw3ub"]
+
+[ext_resource type="Script" path="res://tutfore.gd" id="1_8xkbc"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8xkbc")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 173.0
+offset_right = 693.0
+offset_bottom = 248.0
+text = "start"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

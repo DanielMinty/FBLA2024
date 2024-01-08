@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4x0j6wlqg1m"]
+
+[ext_resource type="Script" path="res://tutorial.gd" id="1_ln0eh"]
+[ext_resource type="Texture2D" uid="uid://b0xvnh6e6wxmm" path="res://preview.jpg" id="2_4huyl"]
+[ext_resource type="FontFile" uid="uid://b6i6gihkcn3in" path="res://ELASTRO.ttf" id="3_k44au"]
+
+[node name="Textbox" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ln0eh")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_4huyl")
+region_rect = Rect2(186.213, 485.822, 924.869, 146.506)
+patch_margin_left = 296
+patch_margin_top = 52
+patch_margin_right = 304
+patch_margin_bottom = 44
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k44au")
+vertical_alignment = 1
+
+[node name="letterdispalytimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="letterdispalytimer" to="." method="_on_letterdispalytimer_timeout"]
