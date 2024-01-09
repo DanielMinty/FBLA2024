@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://7ty1ab8m6v2n"]
-
-[ext_resource type="PackedScene" uid="uid://bvqghfq06n6pl" path="res://scenes/Levels/level.tscn" id="1_ghgso"]
-[ext_resource type="Script" path="res://scenes/Levels/factory.gd" id="2_iy24v"]
-
-[node name="Factory" instance=ExtResource("1_ghgso")]
-script = ExtResource("2_iy24v")
