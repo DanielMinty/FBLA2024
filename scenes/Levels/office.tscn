@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk4l532h1dfmt"]
+
+[ext_resource type="PackedScene" uid="uid://bvqghfq06n6pl" path="res://scenes/Levels/level.tscn" id="1_urlgt"]
+[ext_resource type="Script" path="res://scenes/Levels/office.gd" id="2_n6xyq"]
+
+[node name="Office" instance=ExtResource("1_urlgt")]
+script = ExtResource("2_n6xyq")
