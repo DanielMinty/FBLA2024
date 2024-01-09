@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://66ql6jl27siw"]
+
+[ext_resource type="PackedScene" uid="uid://d0qt1pyanlfv4" path="res://interactables/interactable.tscn" id="1_p4car"]
+[ext_resource type="Script" path="res://interactables/employee.gd" id="2_lwjli"]
+
+[node name="Employee" instance=ExtResource("1_p4car")]
+script = ExtResource("2_lwjli")
