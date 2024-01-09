@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://cco0u2ollkyj8"]
-
-[ext_resource type="PackedScene" uid="uid://bvqghfq06n6pl" path="res://scenes/level.tscn" id="1_7fkxb"]
-[ext_resource type="Script" path="res://scenes/board.gd" id="2_fy8ky"]
-
-[node name="Board" instance=ExtResource("1_7fkxb")]
-script = ExtResource("2_fy8ky")
