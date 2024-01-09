@@ -1,11 +1,6 @@
 extends Node
 
 
-func _ready():
-	FileAccess.open_encrypted_with_pass("res://track_of_games.save", FileAccess.WRITE, "Friends")
-	for i in range(5):
-		FileAccess.open_encrypted_with_pass("res://saves%s.save" % str(i), FileAccess.WRITE, "Family")
-
 # VARIABLES
 # Player Related
 var stats: Dictionary = {"profit": 0.1, 
@@ -63,16 +58,18 @@ signal day_changed
 # FUNCTIONS
 # When player fails the game after passing DAYS_THRESHOLD
 func fail() -> void:
-	pass # trigger lose scene
+	var format_displayed_grade: String = "You got an %s."
+	var displayed_grade = format_displayed_grade % evaluate_grade()
+	UI.optional_continue(displayed_grade, " You lost, you must start again")
 	
 
 # When player wins the game after passing GRADE_THRESHOLD
 func win() -> void:
 	# First: Ask to continue playing
 	# Second: do this
-	var format_displayed_grade: String = "You got an %s"
-	var _displayed_grade = format_displayed_grade % evaluate_grade()
-	var _leaderboard_scene: Script = preload("res://ui/local_leaderboard.gd")
+	var format_displayed_grade: String = "You got an %s."
+	var displayed_grade = format_displayed_grade % evaluate_grade()
+	UI.optional_continue(displayed_grade)
 	# do more stuff with leaderboard
 
 
