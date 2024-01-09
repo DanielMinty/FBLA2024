@@ -1,4 +1,0 @@
-[gd_scene format=3 uid="uid://ctk3dakqayc3d"]
-
-[node name="Background Music" type="AudioStreamPlayer2D"]
-autoplay = true
