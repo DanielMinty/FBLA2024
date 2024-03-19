@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvhosqdohvlku"]
-
-[ext_resource type="PackedScene" uid="uid://d0qt1pyanlfv4" path="res://interactables/interactable.tscn" id="1_f13nm"]
-[ext_resource type="Script" path="res://interactables/office_computer.gd" id="2_5xpci"]
-
-[node name="Office Computer" instance=ExtResource("1_f13nm")]
-script = ExtResource("2_5xpci")
