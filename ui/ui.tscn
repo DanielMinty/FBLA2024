@@ -1,0 +1,137 @@
+[gd_scene load_steps=8 format=3 uid="uid://bbcodlaxvj7m3"]
+
+[ext_resource type="Script" path="res://ui/ui.gd" id="1_wox7n"]
+[ext_resource type="Theme" uid="uid://dqdpb1lan45tv" path="res://ui/ui.tres" id="3_kqerf"]
+[ext_resource type="Texture2D" uid="uid://bqblkfxgfdxg2" path="res://Assets/Icons/Cash.png" id="3_ufjvj"]
+[ext_resource type="Texture2D" uid="uid://bev4v7y8vc43k" path="res://Assets/Icons/Flower2.png" id="4_lsabx"]
+[ext_resource type="Texture2D" uid="uid://0psbysgyjfg0" path="res://Assets/Team.png" id="5_mhise"]
+[ext_resource type="Texture2D" uid="uid://cva14jy5gpgxr" path="res://Assets/Eye.png" id="6_dul24"]
+[ext_resource type="Texture2D" uid="uid://k4nbginl50tv" path="res://Assets/Icons/Car.png" id="7_o4t4u"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_wox7n")
+
+[node name="Timer" type="MarginContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.82
+anchor_right = 0.825
+offset_left = -93.0
+offset_bottom = 10.0
+grow_horizontal = 0
+scale = Vector2(3, 3)
+size_flags_horizontal = 8
+
+[node name="PanelContainer" type="PanelContainer" parent="Timer"]
+layout_mode = 2
+theme = ExtResource("3_kqerf")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Timer/PanelContainer"]
+layout_mode = 2
+theme = ExtResource("3_kqerf")
+
+[node name="Timer" type="Label" parent="Timer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "Turns Left: "
+
+[node name="Label" type="Label" parent="Timer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "1"
+
+[node name="Stats" type="MarginContainer" parent="."]
+offset_right = 30.0
+offset_bottom = 100.0
+scale = Vector2(1.75, 1.75)
+size_flags_horizontal = 0
+theme = ExtResource("3_kqerf")
+
+[node name="Panel" type="PanelContainer" parent="Stats"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Stats/Panel"]
+layout_mode = 2
+
+[node name="Employee Friendliness" type="HBoxContainer" parent="Stats/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Stats/Panel/VBoxContainer/Employee Friendliness"]
+layout_mode = 2
+texture = ExtResource("5_mhise")
+
+[node name="Label" type="Label" parent="Stats/Panel/VBoxContainer/Employee Friendliness"]
+layout_mode = 2
+text = "1"
+
+[node name="Environment Indicators" type="HBoxContainer" parent="Stats/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Stats/Panel/VBoxContainer/Environment Indicators"]
+layout_mode = 2
+texture = ExtResource("4_lsabx")
+
+[node name="Label" type="Label" parent="Stats/Panel/VBoxContainer/Environment Indicators"]
+layout_mode = 2
+text = "1"
+
+[node name="Product Quality" type="HBoxContainer" parent="Stats/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Stats/Panel/VBoxContainer/Product Quality"]
+layout_mode = 2
+texture = ExtResource("7_o4t4u")
+
+[node name="Label" type="Label" parent="Stats/Panel/VBoxContainer/Product Quality"]
+layout_mode = 2
+text = "1"
+
+[node name="Profit" type="HBoxContainer" parent="Stats/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Stats/Panel/VBoxContainer/Profit"]
+layout_mode = 2
+texture = ExtResource("3_ufjvj")
+
+[node name="Label" type="Label" parent="Stats/Panel/VBoxContainer/Profit"]
+layout_mode = 2
+text = "1"
+
+[node name="Public Relations" type="HBoxContainer" parent="Stats/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Stats/Panel/VBoxContainer/Public Relations"]
+layout_mode = 2
+texture = ExtResource("6_dul24")
+
+[node name="Label" type="Label" parent="Stats/Panel/VBoxContainer/Public Relations"]
+layout_mode = 2
+text = "1"
+
+[node name="Optional Continue Scene" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Optional Continue Scene"]
+layout_mode = 2
+
+[node name="Text" type="Label" parent="Optional Continue Scene/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Optional Continue Scene/VBoxContainer"]
+layout_mode = 2
+text = "Continue"
+
+[node name="Button2" type="Button" parent="Optional Continue Scene/VBoxContainer"]
+layout_mode = 2
+text = "End"
+
+[connection signal="pressed" from="Optional Continue Scene/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Optional Continue Scene/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

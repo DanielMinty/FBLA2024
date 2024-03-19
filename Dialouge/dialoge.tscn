@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2g4f702tf5f1"]
+
+[ext_resource type="Script" path="res://Dialouge/Dialoge.gd" id="1_2b6dg"]
+[ext_resource type="FontFile" uid="uid://lwxgorofjch2" path="res://Assets/font/dogicapixelbold.ttf" id="2_hses3"]
+[ext_resource type="Theme" uid="uid://dqdpb1lan45tv" path="res://ui/ui.tres" id="2_l55av"]
+
+[node name="Dialouge" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_2b6dg")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = -0.5
+offset_top = -3.0
+offset_right = 0.5
+offset_bottom = 3.0
+theme = ExtResource("2_l55av")
+theme_override_fonts/font = ExtResource("2_hses3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="next_char" type="Timer" parent="."]
+
+[node name="next_message" type="Timer" parent="."]
+
+[connection signal="timeout" from="next_char" to="." method="_on_next_char_timeout"]
+[connection signal="timeout" from="next_message" to="." method="_on_next_message_timeout"]

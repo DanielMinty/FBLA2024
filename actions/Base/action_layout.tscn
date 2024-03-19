@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvc58u6ti6cro"]
+
+[ext_resource type="Theme" uid="uid://dqdpb1lan45tv" path="res://ui/ui.tres" id="1_1y7sk"]
+[ext_resource type="Script" path="res://actions/Base/action_layout.gd" id="1_vg2wi"]
+
+[node name="Actions" type="Control"]
+z_index = 1
+layout_mode = 3
+anchor_left = 0.3
+anchor_top = 0.2
+anchor_right = 0.7
+anchor_bottom = 0.8
+offset_left = -19.6
+offset_top = -19.6
+offset_right = 20.3999
+offset_bottom = 20.4
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1y7sk")
+script = ExtResource("1_vg2wi")
+
+[node name="Background" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background"]
+layout_mode = 2
+
+[node name="Text" type="Label" parent="Background/VBoxContainer"]
+layout_mode = 2
+
+[node name="Options" type="VBoxContainer" parent="Background/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
